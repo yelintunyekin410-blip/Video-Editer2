@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodlyEdit - 4K 120FPS Video Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.9.0/dist/ffmpeg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.9.0/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>GodlyEdit</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <button class="nav-cta">Start Editing</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fas fa-fire"></i>
+                <span>TikTok Creator's #1 Choice</span>
+            </div>
+            <h1>Create <span class="gradient-text">Godly</span> Edits<br>in 4K 120FPS</h1>
+            <p class="hero-subtitle">Professional video editing powered by AI. Export stunning 4K 120FPS videos optimized for TikTok - completely free.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="document.getElementById('upload-section').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-upload"></i>
+                    Upload Video Free
+                </button>
+                <button class="btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Demo
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Videos Edited</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4K</span>
+                    <span class="stat-label">Resolution</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">120</span>
+                    <span class="stat-label">FPS</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="video-card">
+                <div class="video-preview">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="quality-badge">4K 120FPS</div>
+                </div>
+                <div class="video-info">
+                    <div class="quality-tags">
+                        <span class="tag">AI Enhanced</span>
+                        <span class="tag">TikTok Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload-section" class="upload-section">
+        <div class="section-header">
+            <h2>Upload Your Video</h2>
+            <p>Drag & drop or click to select. Supports MP4, MOV, AVI up to 2GB.</p>
+        </div>
+        <div class="upload-zone" id="uploadZone">
+            <div class="upload-content">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drop your video here</h3>
+                <p>or <span class="browse-link">browse files</span></p>
+                <div class="supported-formats">
+                    <span>MP4</span>
+                    <span>MOV</span>
+                    <span>AVI</span>
+                    <span>MKV</span>
+                </div>
+            </div>
+            <input type="file" id="fileInput" accept="video/*" hidden>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <span class="section-badge">Features</span>
+            <h2>Everything You Need for <span class="gradient-text">Viral Content</span></h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <h3>4K 120FPS Export</h3>
+                <p>Crystal clear quality with buttery smooth motion. Perfect for gaming and action content.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>AI Auto-Edit</h3>
+                <p>Smart cuts, transitions, and effects applied automatically based on your content.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>TikTok Optimized</h3>
+                <p>Perfect 9:16 aspect ratio with trending audio sync and caption templates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>GPU-accelerated rendering. Export a 60-second clip in under 30 seconds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Pro Color Grading</h3>
+                <p>Cinematic LUTs and color correction with one-click presets.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>Audio Enhancement</h3>
+                <p>Noise removal, auto-ducking, and trending TikTok sound library.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <span class="section-badge">How It Works</span>
+            <h2>Create in <span class="gradient-text">3 Simple Steps</span></h2>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Upload</h3>
+                    <p>Drag and drop your raw footage. We support all major formats.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Auto-Edit</h3>
+                    <p>Our AI analyzes and enhances your video with pro-level edits.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Export & Share</h3>
+                    <p>Download in 4K 120FPS and upload directly to TikTok.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <span class="section-badge">Pricing</span>
+            <h2>Start <span class="gradient-text">Free</span>, Upgrade Anytime</h2>
+        </div>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Free</h3>
+                    <div class="price">$0<span>/month</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 10 videos/month</li>
+                    <li><i class="fas fa-check"></i> 4K 60FPS export</li>
+                    <li><i class="fas fa-check"></i> Basic AI editing</li>
+                    <li><i class="fas fa-check"></i> Watermark</li>
+                </ul>
+                <button class="btn-outline">Get Started</button>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Creator</h3>
+                    <div class="price">$0<span>/month</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Unlimited videos</li>
+                    <li><i class="fas fa-check"></i> 4K 120FPS export</li>
+                    <li><i class="fas fa-check"></i> Advanced AI editing</li>
+                    <li><i class="fas fa-check"></i> No watermark</li>
+                    <li><i class="fas fa-check"></i> Priority rendering</li>
+                </ul>
+                <button class="btn-primary">Get Started Free</button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Pro</h3>
+                    <div class="price">Coming Soon</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Everything in Creator</li>
+                    <li><i class="fas fa-check"></i> Custom branding</li>
+                    <li><i class="fas fa-check"></i> API access</li>
+                    <li><i class="fas fa-check"></i> Team collaboration</li>
+                </ul>
+                <button class="btn-outline">Join Waitlist</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>GodlyEdit</span>
+                </div>
+                <p>Create stunning 4K 120FPS videos for TikTok, completely free.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">API</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GodlyEdit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
